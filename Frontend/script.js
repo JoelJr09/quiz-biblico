@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3000";
+const apiUrl = "https://quiz-biblico-api-joel.onrender.com";
 
 // O array 'questions' fixo foi REMOVIDO
 // As perguntas agora vêm do backend
