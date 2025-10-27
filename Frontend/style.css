@@ -1,0 +1,403 @@
+    body {
+      margin: 0;
+      /* Remove margens padrão do body */
+      display: flex;
+      /* Centraliza o container na tela */
+      flex-direction: column;
+      justify-content: center;
+      /* Centraliza horizontalmente */
+      align-items: center;
+      /* Centraliza verticalmente */
+      height: 100vh;
+      /* Altura total da tela */
+      background-image: url('foto/cloudy-watercolor-background.jpg');
+      font-family: 'Merriweather', serif;
+      background-color: #f7f9fc;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      /* Um pouco menor que minha sugestão anterior */
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    h1,
+    h2,
+    #welcome,
+    .answer-btn,
+    #next-btn,
+    .map-button,
+    .level-node {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    #welcome {
+      font-size: 1.2rem;
+      font-weight: 700;
+      /* Negrito */
+      color: #555;
+      line-height: 1.5;
+      /* Espaço entre as linhas */
+    }
+
+    #question {
+      font-size: 1.5rem;
+      /* Fonte bem maior */
+      font-weight: 700;
+      /* Negrito */
+      color: #333;
+      /* Cor escura, mas não preto puro */
+      margin-top: 25px;
+      /* Mais espaço acima */
+    }
+
+    /* Atualize seu .container para isto: */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* align-items: center; -> Remova isso para os botões alinharem à esquerda */
+
+      width: 90%;
+      /* Melhor para celulares */
+      max-width: 550px;
+      /* Um pouco mais largo */
+      min-height: 400px;
+      padding: 2.5rem;
+      /* Mais espaço interno */
+
+      /* O EFEITO DE FLUTUAR */
+      background-image: url('/Frontend/foto/foto-Jesus.jpg');
+      /*background-color: rgba(255, 255, 255, 0.95);
+      /* Leve transparência */
+      border-radius: 20px;
+      /* Cantos mais suaves */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      /* Sombra mais suave */
+
+      /* Removemos as propriedades de background de imagem daqui */
+      border: 1px solid #e0e0e0;
+      /* Borda sutil */
+    }
+
+    /* Estilo para o link "Ver meu Progresso" */
+    #quiz-container a {
+      display: inline-block;
+      /* Para não ocupar a largura toda */
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #007bff;
+      /* Azul padrão */
+      text-decoration: none;
+      /* Sem sublinhado */
+      background-color: #f0f7ff;
+      /* Fundo azul bem claro */
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    #quiz-container a:hover {
+      background-color: #e0f0ff;
+      text-decoration: underline;
+    }
+
+    .btn-group {
+      font-size: 50px;
+      gap: 2%;
+      margin-top: 50%;
+      display: flex;
+      justify-content: center;
+
+    }
+
+
+    #email {
+      font-size: 20px;
+
+    }
+
+    #password {
+      font-size: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #login-container {
+
+      background-image: url('/Frontend/foto/foto-Jesus.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+    }
+
+   /* --- CAMPOS DE INPUT (Email e Senha) --- */
+#login-container input[type="email"],
+#login-container input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  
+  /* --- A MUDANÇA --- */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro transparente */
+  color: #FFFFFF; /* Texto branco */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borda branca transparente */
+  border-radius: 8px;
+  transition: all 0.2s ease; /* Transição suave */
+}
+
+/* --- MUDANÇA NO PLACEHOLDER --- */
+/* (Para o texto "Email" e "Senha" também ficar claro) */
+#login-container input::placeholder {
+  color: #ccc;
+}
+
+/* --- EFEITO HOVER NOS INPUTS --- */
+#login-container input[type="email"]:hover,
+#login-container input[type="password"]:hover,
+#login-container input[type="email"]:focus,
+#login-container input[type="password"]:focus {
+  background-color: rgba(0, 0, 0, 0.7); /* Mais escuro ao focar/passar o mouse */
+  border-color: rgba(255, 255, 255, 0.7);
+  outline: none; /* Remove a borda azul padrão do Chrome */
+}
+
+/* --- BOTÃO PRINCIPAL (Entrar) --- */
+#loginBtn {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  cursor: pointer;
+
+  /* --- A MUDANÇA --- */
+  background-color: rgba(0, 123, 255, 0.7); /* Azul transparente */
+  border: 1px solid rgba(0, 123, 255, 0.9); /* Borda azul */
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+#loginBtn:hover {
+  background-color: #007bff; /* Cor sólida (azul forte) no hover */
+}
+
+/* --- LINK SECUNDÁRIO (Registrar) --- */
+#login-container a {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(9, 1, 1);
+  text-decoration: none;
+  
+
+  /* --- A MUDANÇA --- */
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.7); /* Borda branca */
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  
+  
+}
+
+
+#login-container a:hover {
+  background-color: #6c757d; /* Cor sólida (cinza forte) no hover */
+}
+
+    #loginBtn {
+      cursor: pointer;
+    }
+
+
+
+    /* --- ESTILOS DA PÁGINA DE MAPA (mapa.html) --- */
+
+    #map-container {
+      /* Reutiliza o estilo do .container mas dá mais espaço */
+      width: 60%;
+      max-width: 800px;
+      min-height: 300px;
+    }
+
+    #map-welcome {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .path-container {
+      width: 100%;
+      overflow-x: auto;
+      /* Permite rolar em telas pequenas */
+    }
+
+    .path-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /* Tenta espaçar igualmente */
+      list-style-type: none;
+      padding: 20px 0;
+      margin: 0;
+    }
+
+    .level-node {
+      /* O círculo de cada nível */
+      position: relative;
+      /* Importante para a linha de conexão */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      /* Faz ser um círculo */
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: white;
+
+      flex-shrink: 0;
+      /* Impede que os círculos encolham */
+      margin: 0 10px;
+      /* Espaço entre os nós */
+
+      background-color: #aaa;
+      /* Cor padrão (bloqueado) */
+      border: 4px solid #888;
+      color: #888;
+      background-color: #f0f0f0;
+    }
+
+    .path-line {
+      /* A linha de conexão entre os nós */
+      position: absolute;
+      height: 6px;
+      background-color: #ddd;
+      /* Linha bloqueada */
+
+      /* Começa no centro do círculo e vai até o próximo */
+      left: 50%;
+      width: 100%;
+      /* Largura base (ajustada pelo flex-gap) */
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+
+      /* Ajuste para o espaço (gap) */
+      width: calc(100% + 20px);
+      /* 100% + (2 * margin) */
+    }
+
+    /* NÓS COMPLETADOS (VERDE) */
+    .level-complete {
+      background-color: #28a745;
+      /* Verde */
+      border-color: #218838;
+      color: white;
+    }
+
+    .level-complete .path-line {
+      background-color: #28a745;
+      /* Linha verde */
+    }
+
+    /* NÓ ATUAL (AZUL) */
+    .level-current {
+      background-color: #007bff;
+      /* Azul */
+      border-color: #0056b3;
+      color: white;
+      transform: scale(1.1);
+      /* Um pouco maior para destacar */
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+    }
+
+    .level-current .path-line {
+      background-color: #ddd;
+      /* A linha saindo dele ainda está bloqueada */
+    }
+
+    /* --- Estilo do Quiz (Melhorias) --- */
+
+    /* Isso faz os botões de resposta ficarem em uma coluna */
+    #answers {
+      display: grid;
+      grid-template-columns: 1fr;
+      /* 1 coluna, largura total */
+      gap: 12px;
+      /* Espaço entre os botões */
+      margin: 20px 0;
+      /* Espaço acima e abaixo */
+    }
+
+    /* O novo visual do botão de resposta */
+    .answer-btn {
+      display: block;
+      width: 100%;
+      background-color: #f8f9fa;
+      /* Um branco-gelo */
+      border: 2px solid #dee2e6;
+      /* Borda sutil */
+      border-radius: 8px;
+      /* Cantos mais arredondados */
+      padding: 15px;
+      font-size: 1.1rem;
+      /* Fonte maior */
+      color: #495057;
+      /* Cor do texto mais suave */
+      text-align: left;
+      /* Alinhar o texto à esquerda */
+      cursor: pointer;
+      transition: all 0.2s ease;
+      /* Transição suave */
+    }
+
+    /* Efeito ao passar o mouse */
+    .answer-btn:hover:not(:disabled) {
+      background-color: #e9ecef;
+      /* Escurece um pouco */
+      border-color: #adb5bd;
+    }
+
+    /* Estilo do botão quando desabilitado (após clicar) */
+    .answer-btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.8;
+    }
+
+    /* Botão de Voltar */
+    .map-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 10px 20px;
+      background-color: #6c757d;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+
+    .map-button:hover {
+      background-color: #5a6268;
+    }

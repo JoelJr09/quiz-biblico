@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Quiz Bíblico</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>Quiz Bíblico</h1>
+  <div class="container" id="login-container">
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Senha" required />
+
+    <button id="loginBtn">Entrar</button>
+    <a href="register.html">Registrar</a>
+    
+    <div class="message" id="message"></div>
+  </div>
+
+  <script src="login.js"></script>
+
+  <script>
+    const apiUrl = "http://localhost:3000";
+
+    document.getElementById("login-btn").addEventListener("click", async () => {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      const res = await fetch(`${apiUrl}/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        localStorage.setItem("userId", data.userId);
+        localStorage.setItem("username", data.username);
+        window.location.href = "quiz.html";
+      } else {
+        alert(data.message);
+      }
+    });
+
+    document.getElementById("register-btn").addEventListener("click", async () => {
+      const username = prompt("Digite seu nome:");
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      const res = await fetch(`${apiUrl}/register`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, email, password }),
+      });
+
+      const data = await res.json();
+      alert(data.message);
+    });
+  </script>
+</body>
+
+</html>
