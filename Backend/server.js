@@ -12,12 +12,12 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // 🔗 Conexão com o MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/quizbiblia", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log("✅ MongoDB conectado"))
-.catch(err => console.error("❌ Erro ao conectar ao MongoDB:", err));
+// Pega a string de conexão secreta do ambiente do servidor
+const dbUri = process.env.MONGODB_URI; 
+
+mongoose.connect(dbUri)
+  .then(() => console.log("✅ MongoDB (Atlas) conectado"))
+  .catch(err => console.error("❌ Erro ao conectar ao MongoDB:", err));
 
 // 🧾 Registro de usuário
 app.post("/register", async (req, res) => {
