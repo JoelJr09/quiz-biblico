@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3000";
+const apiUrl = "https://quiz-biblico-api-joel.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
   const userId = localStorage.getItem("userId");

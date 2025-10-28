@@ -8,7 +8,10 @@ import Result from "./models/Result.js";
 import Question from "./models/Question.js";
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: 'https://gentle-rolypoly-ac5343.netlify.app'
+};
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // 🔗 Conexão com o MongoDB
