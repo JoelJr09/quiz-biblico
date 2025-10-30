@@ -72,7 +72,7 @@
       /* Mais espaço interno */
 
       /* O EFEITO DE FLUTUAR */
-      background-image: url('/foto/foto-jesus.jpg');
+      background-image: url('foto/foto-jesus.jpg');
       /*background-color: rgba(255, 255, 255, 0.95);
       /* Leve transparência */
       border-radius: 20px;
@@ -134,95 +134,106 @@
 
     #login-container {
 
-      background-image: url('/foto/foto-jesus.jpg');
+      background-image: url('foto/foto-jesus.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 20px;
     }
 
-   /* --- CAMPOS DE INPUT (Email e Senha) --- */
-#login-container input[type="email"],
-#login-container input[type="password"] {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 12px;
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  
-  /* --- A MUDANÇA --- */
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro transparente */
-  color: #FFFFFF; /* Texto branco */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Borda branca transparente */
-  border-radius: 8px;
-  transition: all 0.2s ease; /* Transição suave */
-}
+    /* --- CAMPOS DE INPUT (Email e Senha) --- */
+    #login-container input[type="email"],
+    #login-container input[type="password"] {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
 
-/* --- MUDANÇA NO PLACEHOLDER --- */
-/* (Para o texto "Email" e "Senha" também ficar claro) */
-#login-container input::placeholder {
-  color: #ccc;
-}
+      /* --- A MUDANÇA --- */
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Fundo escuro transparente */
+      color: #FFFFFF;
+      /* Texto branco */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      /* Borda branca transparente */
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      /* Transição suave */
+    }
 
-/* --- EFEITO HOVER NOS INPUTS --- */
-#login-container input[type="email"]:hover,
-#login-container input[type="password"]:hover,
-#login-container input[type="email"]:focus,
-#login-container input[type="password"]:focus {
-  background-color: rgba(0, 0, 0, 0.7); /* Mais escuro ao focar/passar o mouse */
-  border-color: rgba(255, 255, 255, 0.7);
-  outline: none; /* Remove a borda azul padrão do Chrome */
-}
+    /* --- MUDANÇA NO PLACEHOLDER --- */
+    /* (Para o texto "Email" e "Senha" também ficar claro) */
+    #login-container input::placeholder {
+      color: #ccc;
+    }
 
-/* --- BOTÃO PRINCIPAL (Entrar) --- */
-#loginBtn {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 12px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  cursor: pointer;
+    /* --- EFEITO HOVER NOS INPUTS --- */
+    #login-container input[type="email"]:hover,
+    #login-container input[type="password"]:hover,
+    #login-container input[type="email"]:focus,
+    #login-container input[type="password"]:focus {
+      background-color: rgba(0, 0, 0, 0.7);
+      /* Mais escuro ao focar/passar o mouse */
+      border-color: rgba(255, 255, 255, 0.7);
+      outline: none;
+      /* Remove a borda azul padrão do Chrome */
+    }
 
-  /* --- A MUDANÇA --- */
-  background-color: rgba(0, 123, 255, 0.7); /* Azul transparente */
-  border: 1px solid rgba(0, 123, 255, 0.9); /* Borda azul */
-  border-radius: 8px;
-  transition: background-color 0.2s ease;
-}
+    /* --- BOTÃO PRINCIPAL (Entrar) --- */
+    #loginBtn {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      cursor: pointer;
 
-#loginBtn:hover {
-  background-color: #007bff; /* Cor sólida (azul forte) no hover */
-}
+      /* --- A MUDANÇA --- */
+      background-color: rgba(0, 123, 255, 0.7);
+      /* Azul transparente */
+      border: 1px solid rgba(0, 123, 255, 0.9);
+      /* Borda azul */
+      border-radius: 8px;
+      transition: background-color 0.2s ease;
+    }
 
-/* --- LINK SECUNDÁRIO (Registrar) --- */
-#login-container a {
-  width: 100%;
-  box-sizing: border-box;
-  display: block;
-  text-align: center;
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  color: rgb(9, 1, 1);
-  text-decoration: none;
-  
+    #loginBtn:hover {
+      background-color: #007bff;
+      /* Cor sólida (azul forte) no hover */
+    }
 
-  /* --- A MUDANÇA --- */
-  background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.7); /* Borda branca */
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  
-  
-}
+    /* --- LINK SECUNDÁRIO (Registrar) --- */
+    #login-container a {
+      width: 100%;
+      box-sizing: border-box;
+      display: block;
+      text-align: center;
+      padding: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      color: rgb(9, 1, 1);
+      text-decoration: none;
 
 
-#login-container a:hover {
-  background-color: #6c757d; /* Cor sólida (cinza forte) no hover */
-}
+      /* --- A MUDANÇA --- */
+      background-color: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      /* Borda branca */
+      border-radius: 8px;
+      transition: all 0.2s ease;
+
+
+    }
+
+
+    #login-container a:hover {
+      background-color: #6c757d;
+      /* Cor sólida (cinza forte) no hover */
+    }
 
     #loginBtn {
       cursor: pointer;
@@ -350,6 +361,7 @@
       margin: 20px 0;
       /* Espaço acima e abaixo */
     }
+    
 
     /* O novo visual do botão de resposta */
     .answer-btn {

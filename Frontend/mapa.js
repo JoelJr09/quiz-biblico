@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const welcomeEl = document.getElementById("map-welcome");
   const pathListEl = document.querySelector(".path-list");
   
-  welcomeEl.innerText = `Olá, ${username}! Este é o seu progresso:`;
+ // welcomeEl.innerText = `Olá, ${username}! Este é o seu progresso:`;
 
   // 2. Busca o nível atualizado do usuário no backend
   fetchLevelData(userId, pathListEl);
